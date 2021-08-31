@@ -36,14 +36,37 @@ a:focus {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .section {
   padding: 94px 0;
+}
+
+@media screen and (min-width: 480px) {
+  .section {
+    padding: 60px 0;
+  }
 }
 
 .li {
@@ -51,7 +74,6 @@ a:focus {
 }
 
 .logo {
-  margin-right: 93px;
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -59,6 +81,18 @@ a:focus {
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+  }
 }
 
 .logo-header {
@@ -167,10 +201,19 @@ a:focus {
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .header__nav-links {
+    display: none;
+  }
+}
+
 .header-box {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header__nav-links {
@@ -197,6 +240,85 @@ a:focus {
 .email-icon,
 .smartphone-icon {
   margin-right: 10px;
+}
+
+.menu-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 767px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-button .icon-menu {
+  display: block;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .hero-section {
@@ -241,13 +363,23 @@ a:focus {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-img.jpg");
 }
 
-.values-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 480px) {
+  .values-list {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .values-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .values__thumb {
@@ -271,8 +403,28 @@ a:focus {
   height: 70px;
 }
 
-.values-list .values__item {
-  width: 270px;
+@media screen and (min-width: 480px) {
+  .values-list .values__item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .values-list .values__item {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .values-list .values__item {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .values-list .values__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .values-list .item:last-child {
@@ -283,15 +435,27 @@ a:focus {
   padding-bottom: 0;
 }
 
-.values,
-.product,
-.comand {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 480px) {
+  .values,
+  .product,
+  .comand {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .values,
+  .product,
+  .comand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .visually-hidden {
@@ -310,6 +474,18 @@ a:focus {
   text-transform: uppercase;
   color: var(--title-text-color);
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .values__title {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .values__title {
+    text-align: left;
+  }
 }
 
 .values__discription {
@@ -359,6 +535,12 @@ a:focus {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .product-section {
+    display: none;
+  }
 }
 
 .comand-section {
@@ -594,8 +776,14 @@ a:focus {
   margin-top: 16px;
 }
 
+@media screen and (min-width: 480px) {
+  .client-social-box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .client-social-link {
-  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -622,6 +810,25 @@ a:focus {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 480px) {
+  .client-social-link {
+    width: 210px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client-social-link {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-social-link {
+    width: 170px;
+  }
+}
+
 .client-social-link svg {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -641,6 +848,12 @@ a:focus {
   width: 216px;
 }
 
+@media screen and (min-width: 480px) {
+  .web-contacts {
+    width: 100%;
+  }
+}
+
 .address {
   font-style: normal;
   font-size: 14px;
@@ -651,16 +864,39 @@ a:focus {
 }
 
 .conect {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .conect {
+    width: 480px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conect {
+    width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .conect {
+    width: 1200px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .conect-title {
@@ -673,11 +909,23 @@ a:focus {
 }
 
 .conecting {
-  width: 206px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 85px;
   margin-right: 90px;
+}
+
+@media screen and (min-width: 480px) {
+  .conecting {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .conecting {
+    width: 206px;
+  }
 }
 
 .page-social-box {
@@ -689,6 +937,13 @@ a:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .page-social-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .page.social-link {
@@ -721,6 +976,12 @@ a:focus {
 .subscription-btn {
   margin-top: 0;
   padding: 10px 28px;
+}
+
+@media screen and (min-width: 480px) {
+  .subscription-btn {
+    margin-top: 20px;
+  }
 }
 
 .send-icon {

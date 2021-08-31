@@ -3,10 +3,13 @@
   width: 100%;
   justify-content: space-between;
   margin-top: 16px;
+
+  @media screen and (min-width: 480px) {
+    flex-wrap: wrap;
+  }
 }
 
 .client-social-link {
-  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -24,6 +27,19 @@
   &:hover svg,
   &:focus svg {
     fill: var(--accent-color);
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 210px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }
 

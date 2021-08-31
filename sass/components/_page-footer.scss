@@ -4,6 +4,10 @@
 
 .web-contacts {
   width: 216px;
+
+  @media screen and (min-width: 480px) {
+    width: 100%;
+  }
 }
 
 .address {
@@ -16,12 +20,27 @@
 }
 
 .conect {
-  display: flex;
+  display: block;
   align-items: baseline;
-  width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    flex-wrap: nowrap;
+  }
 }
 
 .conect-title {
@@ -34,10 +53,18 @@
 }
 
 .conecting {
-  width: 206px;
   flex-wrap: wrap;
   margin-left: 85px;
   margin-right: 90px;
+
+  @media screen and (min-width: 480px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 206px;
+  }
 }
 
 .page-social-box {
@@ -45,6 +72,11 @@
   width: 206px;
   justify-content: space-between;
   margin-top: 20px;
+
+  @media screen and (min-width: 480px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .page.social-link {
@@ -78,6 +110,10 @@
 .subscription-btn {
   margin-top: 0;
   padding: 10px 28px;
+
+  @media screen and (min-width: 480px) {
+    margin-top: 20px;
+  }
 }
 
 .send-icon {
