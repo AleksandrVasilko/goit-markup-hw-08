@@ -3,10 +3,18 @@
 }
 
 .web-contacts {
-  width: 216px;
+  @media screen and (min-width: 768px) {
+    width: 232px;
+    margin-left: 75px;
+    margin-right: 165px;
+  }
+}
 
-  @media screen and (min-width: 480px) {
-    width: 100%;
+@media screen and (min-width: 1200px) {
+  .web-contacts {
+    width: 216px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -40,6 +48,7 @@
   @media screen and (min-width: 1200px) {
     width: 1200px;
     flex-wrap: nowrap;
+    text-align: left;
   }
 }
 
@@ -64,6 +73,17 @@
 
   @media screen and (min-width: 768px) {
     width: 206px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 70px;
+    margin-right: 93px;
   }
 }
 
@@ -103,8 +123,34 @@
   fill: var(--social-link-color);
 }
 
+.subscription {
+  @media screen and(min-width:768px) {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 460px;
+  }
+
+  @media screen and(min-width:1200px) {
+    width: 570px;
+    margin-top: 0;
+  }
+}
+
 .subscription-form {
   margin-top: 20px;
+}
+
+@media screen and(min-width:768px) {
+  .subscription-form input {
+    width: 450px;
+  }
+}
+
+@media screen and(min-width:1200px) {
+  .subscription-form input {
+    width: 354px;
+  }
 }
 
 .subscription-btn {

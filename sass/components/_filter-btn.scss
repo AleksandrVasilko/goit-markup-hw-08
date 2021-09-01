@@ -1,7 +1,15 @@
 .btn-box {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .filter__btn {
@@ -28,6 +36,10 @@
 }
 .filter__item {
   margin-right: 8px;
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__item:last-child {
