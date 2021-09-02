@@ -72,16 +72,32 @@
 
 .portfolio-overlye {
   position: absolute;
-  width: 322px;
-  height: 168px;
   left: 24px;
-  top: 63px;
+
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: #ffffff;
   transform: translate(0, 150%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and(min-width:480px) {
+    width: 402px;
+    height: 140px;
+    top: 150px;
+  }
+
+  @media screen and(min-width:768px) {
+    width: 306px;
+    height: 196px;
+    top: 63px;
+  }
+
+  @media screen and(min-width:1200px) {
+    width: 322px;
+    height: 168px;
+    top: 63px;
+  }
 }
 
 .project-thumb {

@@ -42,6 +42,12 @@
                         +38 096 111 11 11</a>
                 </li>
             </ul>
+
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="40" height="40">
+                    <use href="./images/icons.svg#menu">
+                </svg>
+            </button>
         </div>
     </header>
     <main>
@@ -156,6 +162,32 @@
             </div>
         </section>
     </main>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+            <svg width="40" height="40">
+                <use href="./images/icons.svg#cross">
+            </svg>
+        </button>
+    
+        <ul class="mobile-menu">
+            <li class="menu__links"><a href="./index.html" class="menu__link-page">Студия</a></li>
+            <li class="menu__links"><a href="./portfolio.html" class="menu__link-page">Портфолио</a></li>
+            <li class="menu__links"><a href="" class="menu__link-page">Контакты</a></li>
+        </ul>
+        <ul class="li menu-links">
+            <li class="menu-contact-link-tel"><a href="tel:+380961111111" class="menu__link-page tel">+38 096 111 11 11</a>
+            </li>
+            <li class="menu-contact-link"><a href="mailto:info@devstudio.com"
+                    class="menu__link-page contact">info@devstudio.com</a>
+            </li>
+        </ul>
+        <ul class="li menu-social-links">
+            <li class="menu-sl-item"><a href="" class="menu-social-link">Instagram</a></li>
+            <li class="menu-sl-item"><a href="" class="menu-social-link">Twitter</a></li>
+            <li class="menu-sl-item"><a href="" class="menu-social-link">Facebook</a></li>
+            <li class="menu-sl-item"><a href="" class="menu-social-link">LinkedIn</a></li>
+        </ul>
+    </div>
     <footer class="footer">
         <div class="container">
             <div class="conect">
@@ -210,6 +242,10 @@
             </div>
         </div>
     </footer>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>
