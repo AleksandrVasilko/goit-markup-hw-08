@@ -7,8 +7,13 @@
   color: var(--accent-color);
   text-decoration: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
+    padding: 16px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
     margin-right: 0;
+    padding: 26px 0;
   }
 
   @media screen and (min-width: 1200px) {
@@ -136,6 +141,23 @@
   .header__nav-link:first-child {
     margin-left: 88px;
   }
+
+  .column {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__nav-links.column {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__link-page {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -150,6 +172,10 @@
   & a:hover,
   & a:focus {
     color: var(--accent-color);
+
+    @media screen and(min-width:768px) {
+      flex-direction: column;
+    }
   }
 }
 
