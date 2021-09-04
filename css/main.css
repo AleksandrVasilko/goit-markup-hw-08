@@ -975,6 +975,9 @@ a:focus {
 .project__item {
   overflow: hidden;
   border: 1px solid #eeeeee;
+}
+
+.project__item:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -993,10 +996,6 @@ a:focus {
 .project__item a:focus .portfolio-overlye {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-}
-
-.project__item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
 }
 
 .project__item a {
@@ -1070,21 +1069,24 @@ a:focus {
 
 @media screen and (min-width: 480px) {
   .project__item,
-  .project-thumb {
+  .project-thumb,
+  .project-poster {
     width: 450px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .project__item,
-  .project-item {
+  .project-item,
+  .project-poster {
     width: 354px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .project__item,
-  .project-item {
+  .project-item,
+  .project-poster {
     width: 370px;
   }
 }
