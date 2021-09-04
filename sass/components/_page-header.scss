@@ -149,6 +149,10 @@
   .column a {
     padding: 0;
   }
+
+  .column li {
+    width: 165px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -176,15 +180,17 @@
 }
 
 .contact-link {
-  margin-right: 30px;
+  @media screen and(min-width:768px) {
+    flex-direction: column;
+  }
+
+  @media screen and(min-width:1200px) {
+    margin-right: 30px;
+  }
 
   & a:hover,
   & a:focus {
     color: var(--accent-color);
-
-    @media screen and(min-width:768px) {
-      flex-direction: column;
-    }
   }
 }
 

@@ -244,6 +244,9 @@ a:focus {
   .column a {
     padding: 0;
   }
+  .column li {
+    width: 165px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -273,23 +276,24 @@ a:focus {
   }
 }
 
-.contact-link {
-  margin-right: 30px;
-}
-
-.contact-link a:hover,
-.contact-link a:focus {
-  color: var(--accent-color);
-}
-
 @media screen and (min-width: 768px) {
-  .contact-link a:hover,
-  .contact-link a:focus {
+  .contact-link {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-link {
+    margin-right: 30px;
+  }
+}
+
+.contact-link a:hover,
+.contact-link a:focus {
+  color: var(--accent-color);
 }
 
 .contact-link:last-child {
