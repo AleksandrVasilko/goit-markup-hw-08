@@ -145,18 +145,27 @@
   .column {
     flex-direction: column;
   }
+
+  .column a {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact.email {
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact.email {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .header__nav-links.column {
     flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header__link-page {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }
 

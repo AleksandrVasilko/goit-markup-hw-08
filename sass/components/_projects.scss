@@ -105,22 +105,22 @@
 }
 
 @media screen and (min-width: 480px) {
-  .project__item img,
+  .project__item,
   .project-thumb {
     width: 450px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .project__item img,
-  .project-thumb {
+  .project__item,
+  .project-item {
     width: 354px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .project__item img,
-  .project-thumb {
+  .project__item,
+  .project-item {
     width: 370px;
   }
 }

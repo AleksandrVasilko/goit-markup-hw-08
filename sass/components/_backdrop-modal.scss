@@ -30,7 +30,7 @@
     width: 450px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     width: 528px;
   }
 }
@@ -133,7 +133,11 @@ label {
 
 .policy-label {
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
+
+  @media screen and(min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .policy-link {
