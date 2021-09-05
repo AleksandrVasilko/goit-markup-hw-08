@@ -455,6 +455,12 @@ a:focus {
   border-right: 1px solid #757575;
 }
 
+.menu-position {
+  position: fixed;
+  left: 40px;
+  bottom: 30px;
+}
+
 .hero-section {
   text-align: center;
   padding: 118px 0;
