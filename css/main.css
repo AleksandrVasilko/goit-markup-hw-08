@@ -572,6 +572,24 @@ a:focus {
 }
 
 @media screen and (min-width: 480px) {
+  .values__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .values__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .values__item:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 480px) {
   .values-list .values__item {
     width: 100%;
   }
@@ -589,9 +607,27 @@ a:focus {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .values-list .values__item {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .values-list .values__item:nth-child(-n + 2) {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .values-list .values__item {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .values-list .values__item:nth-child(-n + 2) {
+    margin-bottom: 0;
   }
 }
 
@@ -600,7 +636,13 @@ a:focus {
 }
 
 .values-section {
-  padding-bottom: 0;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .values-section {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -755,14 +797,20 @@ a:focus {
 }
 
 @media screen and (min-width: 1200px) {
-  .comand__item:nth-child(3) {
-    margin-bottom: 30px;
+  .comand__item:nth-child(1) {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .comand__item:nth-child(4) {
-    margin-bottom: 30px;
+  .comand__item:nth-child(2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .comand__item {
+    margin-bottom: 0;
   }
 }
 
@@ -1378,6 +1426,10 @@ a:focus {
   width: 24px;
   height: 24px;
   margin-left: 10px;
+}
+
+.page.social-link svg {
+  fill: var(--secondary-text-color);
 }
 
 .backdrop {

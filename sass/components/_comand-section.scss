@@ -32,16 +32,20 @@
     }
   }
 
-  &:nth-child(3) {
+  &:nth-child(1) {
     @media screen and (min-width: 1200px) {
-      margin-bottom: 30px;
+      margin-bottom: 0;
     }
   }
 
-  &:nth-child(4) {
+  &:nth-child(2) {
     @media screen and (min-width: 1200px) {
-      margin-bottom: 30px;
+      margin-bottom: 0;
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
   }
 }
 
